@@ -10,8 +10,10 @@
 </head>
 
 <body>
+<%= render 'live_edit/ra_live_editor' %>
 <% if user_signed_in? %>
-  <p> Hello, <%= current_user.first_name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
+  <p> Hello, <%= current_user.first_name %>
+    - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
   <br>
 <% end %>
 <%= yield %>

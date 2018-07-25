@@ -184,6 +184,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.0.4)
       loofah (~> 2.2, >= 2.2.2)
+    rails_admin_live_edit (0.1.6)
     rails_admin_rollincode (1.2.1)
       rails (>= 4.0, < 6)
     railties (5.2.0)
@@ -270,6 +271,7 @@ DEPENDENCIES
   pundit
   rails (~> 5.2.0)
   rails_admin!
+  rails_admin_live_edit
   rails_admin_rollincode (~> 1.0)
   sass-rails (~> 5.0)
   selenium-webdriver
