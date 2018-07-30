@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  # get 'users/index'
+  devise_scope :user do
+    get 'users/sign_in', to: 'devise/sessions#new'
+    get 'users/sign_up', to: 'devise/registrations#new'
+    get 'users/edit', to: 'devise/registrations#edit'
+  end
+
+  get 'users/index'
   get '/users', to: 'users#index'
   get '/users/:id', to: 'users#show'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
@@ -9,7 +15,4 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
       registration: 'registration',
       confirmations: 'confirmations'}
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
-
 end

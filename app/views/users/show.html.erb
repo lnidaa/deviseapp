@@ -1,3 +1,13 @@
-<!--<h1><%#= @user.first_name %></h1>-->
-<!--<h3><%#= @user.email %></h3>-->
-<h3>HOHOHO</h3>
+<% if @user.avatar? %>
+  <%= image_tag @user.avatar.url %>
+<% end %>
+<h1><%= @user.first_name %></h1>
+<h3><%= @user.email %></h3>
+
+<h1> ...posts are going to be here...</h1>
+
+
+
+<% if @user == current_user %>
+  <% render 'shared/post_form' %>
+<% end %>

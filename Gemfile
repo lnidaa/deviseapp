@@ -68,3 +68,8 @@ gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_rollincode', '~> 1.0'
 gem 'rails_admin_live_edit'
 gem 'jquery-rails'
+gem 'carrierwave'
+gem 'dotenv-rails'
+gem 'mini_magick', '3.8.0'
+gem 'fog', '1.36.0'
+gem "bootstrap_form", ">= 4.0.0.alpha1"
